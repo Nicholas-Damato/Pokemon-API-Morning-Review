@@ -28,8 +28,8 @@ class Pokemon extends Component {
             <img alt={pokeData.name} src={pokeData.sprites.front_default} />
             <p> Types: </p>
             <ul>
-              {pokeData.types.map((element) => {
-                return <li> {element.type.name} </li>;
+              {pokeData.types.map((element, index) => {
+                return <li key={index}> {element.type.name} </li>;
               })}
             </ul>
           </div>
